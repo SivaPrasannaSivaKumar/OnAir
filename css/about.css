@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 500;
+}
+
+/* Navbar Starts */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+}
+
+#header-img{
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  z-index: -999;
+}
+
+#title__name{
+  color:aliceblue;
+  cursor: pointer;
+  padding: 5px 30px;
+  font-size: 2.5rem;
+}
+
+.nav__links{
+  list-style: none; 
+}
+
+.nav__links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a{
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.nav__links li a:hover{
+  color: #0088a9;
+}
+
+header #contact{
+  padding-right: 30px;
+}
+
+button{
+  padding: 9px 20px;
+  background-color: rgba(0,136,169,1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0,136,169,0.8);
+}
+
+.mic{
+  position: absolute;
+  height: 20px;
+  display: flex;
+  margin: 0px 160px;
+  align-items: center;
+}
+
+.line{
+  width: 5px;
+  height: 20px;
+  background-color: #0088a9;
+  margin: 0 3px;
+  border-radius: 10px;
+  animation: mic 0.8s infinite ;
+}
+
+.line:nth-child(2){
+  animation-delay: 0.1s;
+  background-color: aquamarine;
+}
+
+.line:nth-child(3){
+  animation-delay: 0.2s;
+  background-color: coral;
+}
+
+.line:nth-child(4){
+  animation-delay: 0.3s;
+  background-color: gold;
+}
+
+.line:nth-child(5){
+  animation-delay: 0.4s;
+  background-color: hotpink;
+}
+
+.line:nth-child(6){
+  animation-delay: 0.5s;
+  background-color: lime;
+}
+
+.line:nth-child(7){
+  animation-delay: 0.6s;
+  background-color: red;
+}
+
+.line:nth-child(8){
+  animation-delay: 0.7s;
+}
+
+@keyframes mic {
+  0%{
+    height: 0px;
+  }
+  50%{
+    height: 20px;
+  }
+  100%{
+    height: 0px;
+  }
+}
+
+/* Navbar Ends */
+
+/* Background */
+
+.header-img{
+  width: 100%;
+  height: 100vh;
+}
+
+img{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 30%;
+  z-index: -999;
+}
+
+.about-content h2{
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  font-size: 2.5rem;
+  color: aliceblue;
+}
+
+.about-container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 7px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Text Text2 Text3";
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 100vh;
+  /* background-color: brown; */
+  text-align: center;
+}
+
+.Text { 
+  grid-area: Text; 
+}
+
+.Text #on-air{
+  margin-top: 50px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.Text h2{
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.Text #make-donation{
+  margin: 0px 15px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.Text a{
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  background-color: #0088a9;
+  padding: 5px;
+  color: black;
+}
+
+.Text a:hover{
+  background-color: rgba(0,136,169,0.8);
+  cursor: pointer;
+}
+
+.Text2 { 
+  grid-area: Text2; 
+}
+
+.Text2 .about-head{
+  margin-top: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.Text2 .about-content{
+  opacity: 0.5;
+}
+
+.Text3 { 
+  grid-area: Text3; 
+}
+
+.Text3 .about-head{
+  margin-top: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.Text3 .about-content{
+  opacity: 0.5;
+}
+
+.about-container img{
+  position: absolute;
+  top: 40%;
+  height: 350px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.featured-container #featured{
+  position: absolute;
+  font-size: 2rem;
+  left: 41%;
+}
+
+.featured-container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 7px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Alfred Jayden Vincent";
+}
+
+.Alfred { grid-area: Alfred; }
+
+.Alfred img{
+  position: absolute;
+  border-radius: 20px;
+}
+
+.Alfred h3{
+  font-size: 1.5rem;
+  position: absolute;
+  margin-top: 30%;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  font-weight: 600;
+}
+
+.Alfred h4{
+  position: absolute;
+  margin-top: 32%;
+  margin-bottom: 20px;
+  margin-left: 15%;
+}
+
+.Jayden { grid-area: Jayden; }
+
+.Jayden h3{
+  font-size: 1.5rem;
+  position: absolute;
+  margin-top: 30%;
+  margin-bottom: 20px;
+  margin-left: 35%;
+  font-weight: 600;
+}
+
+.Jayden h4{
+  position: absolute;
+  margin-top: 32%;
+  margin-bottom: 20px;
+  margin-left: 35.05%;
+}
+
+.Vincent { grid-area: Vincent; }
+
+.Vincent h3{
+  font-size: 1.5rem;
+  position: absolute;
+  margin-top: 30%;
+  margin-bottom: 20px;
+  margin-left: 57%;
+  font-weight: 600;
+}
+
+.Vincent h4{
+  position: absolute;
+  margin-top: 32%;
+  margin-bottom: 20px;
+  margin-left: 56.7%;
+}
+
+/* Footer Area */
+
+footer img{
+  position: absolute;
+  top: 200%;
+}
+
+footer h3{
+  position: absolute;
+  top: 205%;
+  left: 23%;
+  color:aliceblue;
+}
+ 
